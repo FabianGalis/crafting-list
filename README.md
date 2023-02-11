@@ -14,8 +14,14 @@ The site usage is self-explanatory.
 
 ### Technical details
 For now, there are 3 pages in total:
-* / (main page, takes no arguments)
-* /recipes/all (takes no arguments)
-* /recipes/specify (takes two arguments: `?id=item_id&group=item_group`)
+* `/` (main page, takes no arguments)
+* `/recipes/all` (takes no arguments)
+* `/recipes/specify` (takes two arguments, id and group: `?id=item_id&group=item_group`)
 
 Every sub-page can be accessed from the main page, and for now, there are only GET requests, since it's a strictly informative api.
+
+The project contains the following files:
+* **api.py** - the back-end where the routing happens, using flask api;
+* **main_page.html** - front-end of the first page in html+css, called in __api.py__;
+* **combine_recipe_json.py** - helper program that combines raw crafting recipees from Minecraft into a single JSON file;
+* **database_recipes.json** - output for the helper program that combines JSONs.
